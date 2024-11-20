@@ -9,7 +9,7 @@ body {
   color: #fff;
   font-size: 1rem;
   width: 100%;
-  font-family: system-ui, "Open Sans", sans-serif;
+  font-family: system-ui, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 .page-container {
@@ -37,7 +37,7 @@ body {
   border: none;
   outline: none;
   border-radius: 8px;
-  box-shadow: black 0 -1px 4px 2px;
+  box-shadow: #000 0 -1px 4px 2px;
 }
 
 #container {
@@ -53,12 +53,6 @@ body {
 svg {
   width: 18px;
   height: 18px;
-}
-
-.calculator-screen {
-  width: 100%;
-  padding: 3em 0.5em;
-  border: 1px solid;
 }
 
 .time-battery-wifi {
@@ -92,6 +86,8 @@ svg {
 
 .element-items {
   width: 100%;
+  padding: 3em 0.5em;
+  border: 1px solid;
 }
 
 .item-wrapper {
@@ -109,7 +105,7 @@ svg {
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
   text-align: center;
-  box-shadow: 0 0 5px 4px black;
+  box-shadow: 0 0 5px 4px #000;
 }
 
 input {
@@ -120,7 +116,7 @@ input {
   outline: none;
   background-color: #060505;
   color: #fff;
-  box-shadow: 0 0 5px 4px black;
+  box-shadow: 0 0 5px 4px #000;
 }
 
 .grid {
