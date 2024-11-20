@@ -15,19 +15,40 @@ body {
 
 .page-container {
   width: 100%;
+  padding: 2rem;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 1rem;
+  margin: auto;
+}
+
+.item-box,
+.grid-box {
+  border: 1px solid;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.bg-orange {
+  background-color: #ffa600;
+  color: #fff;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  box-shadow: black 0 -1px 4px 2px;
 }
 
 #container {
-  min-width: 60%;
   border-radius: 24px;
-  box-shadow: inset 0px -1px 0px 5px;
+  box-shadow: inset 0 -1px 0 5px;
   padding: 1rem;
   margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 svg {
@@ -70,14 +91,58 @@ svg {
   background-color: #fff;
 }
 
-.calculator-screen {
+.element-items {
   width: 100%;
 }
 
-.element-items,
 .item-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.flex-items-one,
+.flex-items-two,
+.flex-items-three,
+.element-items {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  text-align: center;
+  box-shadow: 0 0 5px 4px black;
+}
+
+input {
+  width: 100%;
+  padding: 0.5em;
+  text-align: right;
+  border: none;
+  outline: none;
+  background-color: #060505;
+  color: #fff;
+  box-shadow: 0 0 5px 4px black;
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.orange {
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.equal-span {
+  grid-row-end: 2 span;
+  place-content: center;
+}
+
+.equal-symbol {
+  text-align: center;
 }
 
 .footer-icons {
