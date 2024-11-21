@@ -52,33 +52,61 @@
             </span>
           </div>
         </div>
-        <div class="calculator-screen">0</div>
+        <div class="calculator-screen">
+          <input
+            type="tel"
+            class="calculate-input"
+            id="input-field"
+            placeholder=""
+          />
+        </div>
         <div class="calculator-structure">
           <div class="item-wrapper">
-            <div class="item-box"><span class="orange">AC</span></div>
-            <div class="item-box"><span class="orange">+/-</span></div>
-            <div class="item-box"><span class="orange">%</span></div>
-            <div class="item-box"><span class="orange">÷</span></div>
-            <div class="item-box"><span class="numbers">7</span></div>
-            <div class="item-box"><span class="numbers">8</span></div>
-            <div class="item-box"><span class="numbers">9</span></div>
-            <div class="item-box"><span class="numbers">×</span></div>
-            <div class="item-box"><span class="numbers">4</span></div>
-            <div class="item-box"><span class="numbers">5</span></div>
-            <div class="item-box"><span class="numbers">6</span></div>
-            <div class="item-box"><span class="numbers">−</span></div>
+            <div class="flex-items-one">
+              <div class="item-box bg-orange">
+                <span class="orange">AC</span>
+              </div>
+              <div class="item-box bg-orange">
+                <span class="orange">+/-</span>
+              </div>
+              <div class="item-box bg-orange">
+                <span class="orange">%</span>
+              </div>
+              <div class="item-box bg-orange">
+                <span class="orange">÷</span>
+              </div>
+            </div>
+            <div class="flex-items-two">
+              <div class="item-box"><span class="numbers">7</span></div>
+              <div class="item-box"><span class="numbers">8</span></div>
+              <div class="item-box"><span class="numbers">9</span></div>
+              <div class="item-box bg-orange">
+                <span class="numbers">×</span>
+              </div>
+            </div>
+            <div class="flex-items-three">
+              <div class="item-box"><span class="numbers">4</span></div>
+              <div class="item-box"><span class="numbers">5</span></div>
+              <div class="item-box"><span class="numbers">6</span></div>
+              <div class="item-box bg-orange">
+                <span class="numbers">−</span>
+              </div>
+            </div>
             <div class="grid">
               <div class="element-items">
                 <div class="grid-box"><span class="grid-numbers">1</span></div>
                 <div class="grid-box"><span class="grid-numbers">2</span></div>
                 <div class="grid-box"><span class="grid-numbers">3</span></div>
-                <div class="grid-box">
+                <div class="grid-box equal-span bg-orange">
                   <span class="grid-numbers equal-sign">=</span>
                 </div>
                 <div class="grid-box"><span class="grid-numbers">0</span></div>
-                <div class="grid-box"><span class="grid-numbers">.</span></div>
-                <div class="grid-box"><span class="grid-numbers">+</span></div>
-                <div class="grid-box"><span class="grid-numbers"></span></div>
+                <div class="grid-box bg-orange">
+                  <span class="grid-numbers">.</span>
+                </div>
+                <div class="grid-box bg-orange">
+                  <span class="grid-numbers">+</span>
+                </div>
               </div>
               <div class="footer-icons">
                 <div class="svg">
@@ -86,11 +114,11 @@
                     xmlns="http://www.w3.org/2000/svg"
                     width="200"
                     height="200"
-                    viewBox="0 0 512 512"
+                    viewBox="0 0 42 42"
                   >
                     <path
                       fill="#fff"
-                      d="M32 96v64h448V96H32zm0 128v64h448v-64H32zm0 128v64h448v-64H32z"
+                      d="M15.562 20.766c-1.328-1.922-2.118-4.241-2.281-4.438c1.945-1.356 5.749-3.06 5.962-5.505c.271-3.159-5.081-9.763-6.107-9.823c-2.808.03-7.947 4.782-8.556 6.218c-1.132 2.969-.571 5.732 1.375 9.732c2.478 5.95 11.682 17.237 16.947 20.78c3.484 2.674 6.029 3.724 9.068 3.09c1.413-.268 6.516-4.455 7.027-7.286c.125-1.05-5.807-8.011-8.875-8.287c-2.382-.22-4.666 3.346-6.303 5.089c-.163-.208-1.559-1.297-3.057-3.021c-1.95-2.049-3.762-4.456-5.2-6.549z"
                     />
                   </svg>
                 </div>
@@ -99,13 +127,12 @@
                     xmlns="http://www.w3.org/2000/svg"
                     width="200"
                     height="200"
-                    viewBox="0 0 16 16"
+                    viewBox="0 0 20 20"
                   >
                     <path
-                      fill="currentColor"
-                      d="M8 1.4L6 2.7V1H4v3L0 6.6l.6.8L8 2.6l7.4 4.8l.6-.8z"
+                      fill="#fff"
+                      d="M0 6c0-1.1.9-2 2-2h3l2-2h6l2 2h3a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6zm10 10a5 5 0 1 0 0-10a5 5 0 0 0 0 10zm0-2a3 3 0 1 1 0-6a3 3 0 0 1 0 6z"
                     />
-                    <path fill="#fff" d="M8 4L2 8v7h5v-3h2v3h5V8z" />
                   </svg>
                 </div>
                 <div class="svg">
@@ -113,9 +140,22 @@
                     xmlns="http://www.w3.org/2000/svg"
                     width="200"
                     height="200"
-                    viewBox="0 0 16 16"
+                    viewBox="0 0 24 24"
                   >
-                    <path fill="#fff" d="M4 14V2h2v5.5l5-5v11l-5-5V14z" />
+                    <g
+                      id="feAppMenu0"
+                      fill="none"
+                      fill-rule="evenodd"
+                      stroke="none"
+                      stroke-width="1"
+                    >
+                      <g id="feAppMenu1" fill="#fff">
+                        <path
+                          id="feAppMenu2"
+                          d="M16 16h4v4h-4v-4Zm-6 0h4v4h-4v-4Zm-6 0h4v4H4v-4Zm12-6h4v4h-4v-4Zm-6 0h4v4h-4v-4Zm-6 0h4v4H4v-4Zm12-6h4v4h-4V4Zm-6 0h4v4h-4V4ZM4 4h4v4H4V4Z"
+                        />
+                      </g>
+                    </g>
                   </svg>
                 </div>
               </div>
