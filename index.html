@@ -53,67 +53,103 @@
           </div>
         </div>
         <div class="calculator-screen">
-          <input
-            type="tel"
-            class="calculate-input"
-            id="input-field"
-            placeholder=""
-          />
+          <input id="display" readonly />
         </div>
-        <div class="calculator-structure">
+        <div id="calculator-structure">
           <div class="item-wrapper">
-            <div class="flex-items-one">
-              <button class="item-box bg-orange">
-                <span class="orange">AC</span>
+            <div id="flex-items-one">
+              <button
+                value="AC"
+                onclick="clearDisplay()"
+                class="item-box bg-orange"
+              >
+                AC
               </button>
-              <button class="item-box bg-orange">
-                <span class="orange">+/-</span>
+              <button
+                value="DE"
+                onclick=" display.value = display.value.toString().slice(0, -1);"
+                class="item-box bg-orange"
+              >
+                DE
               </button>
-              <button class="item-box bg-orange">
-                <span class="orange">%</span>
+              <button onclick="appendToDisplay('%')" class="item-box bg-orange">
+                %
               </button>
-              <button class="item-box bg-orange">
-                <span class="orange">÷</span>
+              <button onclick="appendToDisplay('/')" class="item-box bg-orange">
+                ÷
               </button>
             </div>
             <div class="flex-items-two">
-              <button class="item-box"><span class="numbers">7</span></button>
-              <button class="item-box"><span class="numbers">8</span></button>
-              <button class="item-box"><span class="numbers">9</span></button>
-              <button class="item-box bg-orange">
-                <span class="numbers multiply">×</span>
+              <button onclick="appendToDisplay('7')" class="item-box numbers">
+                7
+              </button>
+              <button onclick="appendToDisplay('8')" class="item-box numbers">
+                8
+              </button>
+              <button onclick="appendToDisplay('9')" class="item-box numbers">
+                9
+              </button>
+              <button onclick="appendToDisplay('*')" class="item-box bg-orange">
+                ×
               </button>
             </div>
             <div class="flex-items-three">
-              <button class="item-box"><span class="numbers">4</span></button>
-              <button class="item-box"><span class="numbers">5</span></button>
-              <button class="item-box"><span class="numbers">6</span></button>
-              <button class="item-box bg-orange">
-                <span class="numbers minus">−</span>
+              <button onclick="appendToDisplay('4')" class="item-box numbers">
+                4
+              </button>
+              <button onclick="appendToDisplay('5')" class="item-box numbers">
+                5
+              </button>
+              <button onclick="appendToDisplay('6')" class="item-box numbers">
+                6
+              </button>
+              <button onclick="appendToDisplay('-')" class="item-box bg-orange">
+                −
               </button>
             </div>
             <div class="grid">
               <div class="element-items">
-                <button class="grid-box">
-                  <span class="grid-numbers">1</span>
+                <button
+                  onclick="appendToDisplay('1')"
+                  class="grid-box grid-numbers"
+                >
+                  1
                 </button>
-                <button class="grid-box">
-                  <span class="grid-numbers">2</span>
+                <button
+                  onclick="appendToDisplay('2')"
+                  class="grid-box grid-numbers"
+                >
+                  2
                 </button>
-                <button class="grid-box">
-                  <span class="grid-numbers">3</span>
+                <button
+                  onclick="appendToDisplay('3')"
+                  class="grid-box grid-numbers"
+                >
+                  3
                 </button>
-                <button class="grid-box equal-span bg-orange">
-                  <span class="grid-numbers equal-sign">=</span>
+                <button
+                  onclick="calculate('')"
+                  class="grid-box equal-span bg-orange"
+                >
+                  =
                 </button>
-                <button class="grid-box">
-                  <span class="grid-numbers">0</span>
+                <button
+                  onclick="appendToDisplay('0')"
+                  class="grid-box grid-numbers"
+                >
+                  0
                 </button>
-                <button class="grid-box bg-orange">
-                  <span class="grid-numbers dot">.</span>
+                <button
+                  onclick="appendToDisplay('.')"
+                  class="grid-box bg-orange"
+                >
+                  .
                 </button>
-                <button class="grid-box bg-orange">
-                  <span class="grid-numbers plus">+</span>
+                <button
+                  onclick="appendToDisplay('+')"
+                  class="grid-box bg-orange"
+                >
+                  +
                 </button>
               </div>
               <div class="footer-icons">
@@ -172,5 +208,6 @@
         </div>
       </div>
     </div>
+    <script src="./script/script.js"></script>
   </body>
 </html>
