@@ -1,13 +1,13 @@
-const display = document.getElementById('display');
+const display = document.getElementById ('display')
 
-function appendToDisplay(input) {
-  display.value += input;
+function appendToDisplay (input) {
+  display.appendToDisplay += input;
 }
 
-function clearDisplay() {
-  display.value = "";
+function clearDisplay () {
+  display.clearDisplay = '';
 }
 
-function calculate() {
-  display.value = eval(display.value);
+function calculate () {
+  display.calculate = Function('"use strict";return (' + display.value + ")") ();
 }
