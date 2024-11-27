@@ -59,6 +59,7 @@
           <div class="item-wrapper">
             <div id="flex-items-one">
               <button
+                type="button"
                 value="AC"
                 onclick="clearDisplay()"
                 class="item-box bg-orange"
@@ -66,86 +67,134 @@
                 AC
               </button>
               <button
+                type="button"
                 value="DE"
                 onclick=" display.value = display.value.toString().slice(0, -1);"
                 class="item-box bg-orange"
               >
                 DE
               </button>
-              <button onclick="appendToDisplay('%')" class="item-box bg-orange">
+              <button
+                type="button"
+                onclick="appendToDisplay('%')"
+                class="item-box bg-orange"
+              >
                 %
               </button>
-              <button onclick="appendToDisplay('/')" class="item-box bg-orange">
+              <button
+                type="button"
+                onclick="appendToDisplay('/')"
+                class="item-box bg-orange"
+              >
                 ÷
               </button>
             </div>
             <div class="flex-items-two">
-              <button onclick="appendToDisplay('7')" class="item-box numbers">
+              <button
+                type="button"
+                onclick="appendToDisplay('7')"
+                class="item-box numbers"
+              >
                 7
               </button>
-              <button onclick="appendToDisplay('8')" class="item-box numbers">
+              <button
+                type="button"
+                onclick="appendToDisplay('8')"
+                class="item-box numbers"
+              >
                 8
               </button>
-              <button onclick="appendToDisplay('9')" class="item-box numbers">
+              <button
+                type="button"
+                onclick="appendToDisplay('9')"
+                class="item-box numbers"
+              >
                 9
               </button>
-              <button onclick="appendToDisplay('*')" class="item-box bg-orange">
+              <button
+                type="button"
+                onclick="appendToDisplay('*')"
+                class="item-box bg-orange"
+              >
                 ×
               </button>
             </div>
             <div class="flex-items-three">
-              <button onclick="appendToDisplay('4')" class="item-box numbers">
+              <button
+                type="button"
+                onclick="appendToDisplay('4')"
+                class="item-box numbers"
+              >
                 4
               </button>
-              <button onclick="appendToDisplay('5')" class="item-box numbers">
+              <button
+                type="button"
+                onclick="appendToDisplay('5')"
+                class="item-box numbers"
+              >
                 5
               </button>
-              <button onclick="appendToDisplay('6')" class="item-box numbers">
+              <button
+                type="button"
+                onclick="appendToDisplay('6')"
+                class="item-box numbers"
+              >
                 6
               </button>
-              <button onclick="appendToDisplay('-')" class="item-box bg-orange">
+              <button
+                type="button"
+                onclick="appendToDisplay('-')"
+                class="item-box bg-orange"
+              >
                 −
               </button>
             </div>
             <div class="grid">
               <div class="element-items">
                 <button
+                  type="button"
                   onclick="appendToDisplay('1')"
                   class="grid-box grid-numbers"
                 >
                   1
                 </button>
                 <button
+                  type="button"
                   onclick="appendToDisplay('2')"
                   class="grid-box grid-numbers"
                 >
                   2
                 </button>
                 <button
+                  type="button"
                   onclick="appendToDisplay('3')"
                   class="grid-box grid-numbers"
                 >
                   3
                 </button>
                 <button
+                  type="button"
                   onclick="calculate('')"
                   class="grid-box equal-span bg-orange"
                 >
                   =
                 </button>
                 <button
+                  type="button"
                   onclick="appendToDisplay('0')"
                   class="grid-box grid-numbers"
                 >
                   0
                 </button>
                 <button
+                  type="button"
                   onclick="appendToDisplay('.')"
                   class="grid-box bg-orange"
                 >
                   .
                 </button>
                 <button
+                  type="button"
                   onclick="appendToDisplay('+')"
                   class="grid-box bg-orange"
                 >
