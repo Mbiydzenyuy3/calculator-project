@@ -7,8 +7,12 @@ arr.forEach((button) => {
   button.addEventListener('click', (e) => {
     console.log({ string: e.target.innerHTML })
     if (e.target.innerHTML.trim() == '=') {
-      string = eval(string)
-      input.value = string
+      try {
+        string = new Function('return' + string)()
+        input.value = string
+      } catch (error) {
+        input.value = 'Error'
+      }
     } else if (e.target.innerHTML.trim() == 'AC') {
       string = ''
       input.value = string
