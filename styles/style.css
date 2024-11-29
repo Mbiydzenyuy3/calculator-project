@@ -10,28 +10,63 @@ body {
   font-size: 1rem;
   width: 100%;
   font-family: system-ui, "Open Sans", "Helvetica Neue", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .page-container {
-  width: 100%;
   display: flex;
+  height: 100vh;
+  margin: auto;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 1rem;
 }
 
+.item-box,
+.grid-box {
+  border: 1px solid;
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 1.5em;
+}
+
+.bg-orange {
+  background-color: #ffa600;
+  color: #fff;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  box-shadow: #000 0 -1px 4px 2px;
+}
+
+.bg-orange:hover {
+  background-color: #f00;
+}
+
 #container {
-  min-width: 60%;
   border-radius: 24px;
   box-shadow: inset 0 -1px 0 5px;
   padding: 1rem;
   margin: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.calculator-screen {
+  padding: 3.5rem 0.5em;
+  border: 1px solid;
+  border-radius: 0.5rem;
 }
 
 svg {
-  width: 18px;
-  height: 18px;
+  width: 24px;
+  height: 24px;
 }
 
 .time-battery-wifi {
@@ -63,21 +98,83 @@ svg {
   background-color: #fff;
 }
 
-.calculator-screen {
+.item-wrapper {
   width: 100%;
-  padding: 3em 0.5em;
-  border: 1px solid;
+  display: flex;
+  flex-direction: column;
 }
 
-.element-items,
-.item-wrapper {
+#flex-items-one,
+.flex-items-two,
+.flex-items-three,
+.element-items {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  gap: 0.3rem;
+  text-align: center;
+  box-shadow: 0 0 5px 4px #000;
+  padding-bottom: 0.3rem;
+}
+
+input {
+  width: 100%;
+  padding: 0.5em;
+  font-size: 18px;
+  text-align: right;
+  border: none;
+  outline: none;
+  background-color: #060505;
+  color: #fff;
+  box-shadow: 0 0 5px 4px #000;
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.orange,
+.multiply,
+.plus,
+.dot,
+.minus {
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.equal-span {
+  grid-row-end: 2 span;
+  place-content: center;
+}
+
+.equal-symbol {
+  text-align: center;
 }
 
 .footer-icons {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 5rem;
+  gap: 6rem;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    font-size: 1.2rem;
+    line-height: 24px;
+  }
+
+  .grid-box,
+  .calculator-screen,
+  .item-box {
+    border-radius: 4px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .bg-orange {
+    background-color: #f9a805;
+  }
 }
